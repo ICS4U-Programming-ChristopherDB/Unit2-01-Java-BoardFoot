@@ -3,8 +3,7 @@ package com.example;
 import java.util.Scanner;
 
 /**
- * This program calculates the length of wood per one board. The length is calculated using a
- * user-specified height and width.
+ * This program calculates the length of wood per one board.
  *
  * @author Christopher Di Bert
  * @version 1.0
