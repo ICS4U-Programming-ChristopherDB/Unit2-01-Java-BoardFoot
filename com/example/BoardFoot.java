@@ -38,9 +38,15 @@ public final class BoardFoot {
 
       // Calls length calculation method.
       double boardLength = calculateLen(userHeight, userWidth);
-      // Outputs the board length to the console.
-      System.out.print("\nThe board length is ");
-      System.out.println(boardLength + " inches.");
+
+      // Checks if the user entered a negative dimension.
+      if (boardLength < 0) {
+        System.out.println("You must enter positive values!");
+      } else {
+        // Outputs the board length to the console.
+        System.out.print("\nThe board length is ");
+        System.out.println(boardLength + " inches.");
+      }
 
       // Error message if invalid input was provided.
     } catch (Exception e) {
