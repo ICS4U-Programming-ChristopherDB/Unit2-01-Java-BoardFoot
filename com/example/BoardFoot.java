@@ -3,7 +3,8 @@ package com.example;
 import java.util.Scanner;
 
 /**
- * This program calculates the length of wood per one board given its width and height.
+ * This program calculates the length of wood per one board. The length is calculated using a
+ * user-specified height and width.
  *
  * @author Christopher Di Bert
  * @version 1.0
@@ -37,7 +38,7 @@ public final class BoardFoot {
       double userWidth = sc.nextDouble();
 
       // Calls length calculation method.
-      double boardLength = CalculateBoardFoot(userHeight, userWidth);
+      double boardLength = calculateLen(userHeight, userWidth);
       // Outputs the board length to the console.
       System.out.print("\nThe board length is ");
       System.out.println(boardLength + " inches.");
@@ -53,12 +54,16 @@ public final class BoardFoot {
    *
    * @param height passed.
    * @param width passed.
+   * @return boardLength.
    */
-  private static double CalculateBoardFoot(double height, double width) {
+  private static double calculateLen(final double height, final double width) {
     // Declares the volume of one board length.
     final double boardVolume = 144f;
 
-    // Calculates and returns the board length.
-    return boardVolume / (height * width);
+    // Calculates the board length.
+    final double boardLength = boardVolume / (height * width);
+
+    // Returns the board length.
+    return boardLength;
   }
 }
